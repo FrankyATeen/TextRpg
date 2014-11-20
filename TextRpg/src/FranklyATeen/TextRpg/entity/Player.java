@@ -6,21 +6,25 @@ public class Player {
 	private int level;
 	private int maxHealth;
 	private int health;
+	private int neededXp;
 	private int xp;
 	private int dammage;
 	
+	
 	public Player(){
 		this.name = "Default name";
-		this.maxHealth = 100;
-		this.level = 1;
-		this.xp = 0;
-		this.dammage = 50;
+		initStarterValues();
 	}
 	
 	public Player(String name){
 		this.name = name;
+		initStarterValues();
+	}
+	
+	public void initStarterValues(){
 		this.maxHealth = 100;
 		this.level = 1;
+		this.neededXp = 10;
 		this.xp = 0;
 		this.dammage = 50;
 	}
@@ -41,11 +45,21 @@ public class Player {
 		return health;
 	}
 	
-	public void levelUp(){
-		level++;
+	public int getNeededXp(){
+		return neededXp;
+	}
+	
+	public int getXp(){
+		return xp;
 	}
 	
 	public int getDammage(){
 		return dammage;
 	}
+	
+	public void levelUp(){
+		level++;
+	}
+	
+	
 }

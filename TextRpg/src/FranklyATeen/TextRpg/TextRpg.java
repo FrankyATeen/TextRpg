@@ -1,11 +1,17 @@
 package FranklyATeen.TextRpg;
 
+import java.util.Scanner;
+
+import FranklyATeen.TextRpg.Input.InputHandler;
+
 public class TextRpg {
 
 	
 	private static boolean playing;
+	private static InputHandler input;
 	
 	public static void main(String[] args) {
+		input = new InputHandler(new Scanner(System.in));
 		play();
 	}
 
@@ -13,7 +19,7 @@ public class TextRpg {
 		// TODO Auto-generated method stub
 		playing = true;
 		while(playing){
-			
+			input.getInput();
 			
 			
 			
