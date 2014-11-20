@@ -2,6 +2,7 @@ package FranklyATeen.TextRpg;
 
 import java.util.Scanner;
 
+import FranklyATeen.TextRpg.Input.Command;
 import FranklyATeen.TextRpg.Input.InputHandler;
 
 public class TextRpg {
@@ -19,13 +20,21 @@ public class TextRpg {
 		// TODO Auto-generated method stub
 		playing = true;
 		while(playing){
-			input.getInput();
-			
+			Command nextCommand = input.getInput();
+			selectCommand(nextCommand);
 			
 			
 			// this is so cpu does not get overloaded
 			try {	Thread.sleep(50); } catch (InterruptedException e) {/* TODO Auto-generated catch block*/ e.printStackTrace();
 			}
+		}
+	}
+
+	private static void selectCommand(Command nextCommand) {
+		switch(nextCommand.getCommand()){
+			case "quit":
+					System.exit(1);
+				break;
 		}
 	}
 
