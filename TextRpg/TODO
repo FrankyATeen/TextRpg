@@ -1,0 +1,11 @@
+Before GUI
+	make input class
+	make the player class
+	make the room class
+	make the entity class
+	make the mob class
+	make the item class
+	make the inventory class
+After GUI
+	make the weapon class
+	make the armor class
